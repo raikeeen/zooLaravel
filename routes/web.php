@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/animal-classes','AnimalClasses@index')->name('animal-class');
+Route::get('/animal-classes/create','AnimalClasses@displayCreate')->name('animal-class-display-create');
+Route::post('/animal-classes/create','AnimalClasses@create');
+
+
+

@@ -16,10 +16,6 @@ class CreateAnimalClassesTable extends Migration
             Schema::create('animal_classes', function (Blueprint $table) {
                 $table->increments('id');
                 $table->string('titles');
-
-
-                $table->integer('lock_id')->unsigned();
-                $table->foreign('lock_id')->references('id')->on('locks');
                 $table->timestamps();
 
             });    }
